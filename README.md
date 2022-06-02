@@ -15,6 +15,7 @@ Class Product
 ⦁   -category    : String
 ⦁ Complete the parameterized constructor to initialize all properties
 ⦁ Complete the getters and setters for all properties
+
 Class ProductService
 Define the below methods
 + findNameByCode(int): String
