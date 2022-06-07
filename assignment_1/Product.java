@@ -85,27 +85,27 @@ public class Product {
         // calling the method findNameByCode from Product service and pass the argument
         // product code as type int!
         // It will return product name
-        String prodName = productService.findNameByCode(513);
+        String prodName = productService.findNameByCode(111);
         System.out.println(prodName);
 
         // calling the method findMaxPriceProduct from Product service and pass the
         // argument catagory as type string!
         // It will return product object
-        Product product_obj = productService.findMaxPriceProduct("mobile");
-        System.out.println(product_obj);
+        // Product product_obj = productService.findMaxPriceProduct("mobile");
+        // System.out.println(product_obj);
 
         // calling the method getProductsByCatagory from Product service and pass the
         // argument catagory as type string!
         // it will return the list of products
-        ArrayList<Product> products = productService.getProductsByCategory("fashion");
-        if (products != null) {
-            Iterator itr = products.iterator();
-            while (itr.hasNext()) {
-                Product product = (Product) itr.next();
-                System.out.println("[ product code: " + product.getProductCode() + ", product name: "
-                        + product.getName() + ", product price: Rs." + product.getPrice() + ", product catagory: "
-                        + product.getCategory() + " ]");
-            }
-        }
+    //     ArrayList<Product> products = productService.getProductsByCategory("fashion");
+    //     if (products != null) {
+    //         Iterator itr = products.iterator();
+    //         while (itr.hasNext()) {
+    //             Product product = (Product) itr.next();
+    //             System.out.println("[ product code: " + product.getProductCode() + ", product name: "
+    //                     + product.getName() + ", product price: Rs." + product.getPrice() + ", product catagory: "
+    //                     + product.getCategory() + " ]");
+    //         }
+    //     }
     }
 }

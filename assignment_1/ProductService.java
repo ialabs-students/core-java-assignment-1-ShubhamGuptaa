@@ -17,15 +17,23 @@ public class ProductService {
     // from the list of products present in ProductRepository
     // - If no product is found for the given product code, return null
     public String findNameByCode(int productCode) {
-        prods.forEach(
-                a -> {
-                    if (productCode == a.getProductCode()) {
-                        prodName = a.getName();
-                    } else {
-                        prodName = null;
-                    }
-                });
-        return ("Product Name: " + prodName);
+        try{
+            prods.forEach(
+                    a -> {
+                        if (productCode == a.getProductCode()) {
+                            prodName = a.getName();
+
+                        } 
+
+                    });
+                    return ("Product Name: " + prodName);
+                }
+           
+        catch (Exception e){
+            prodName = null;
+            return ("Product Name: " + prodName);
+        }
+       
     }
 
     // - Should take product category as a parameter and return the product object
