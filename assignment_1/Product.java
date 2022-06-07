@@ -2,6 +2,8 @@ package assignment_1;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Scanner;
+
 
 public class Product {
     // Data members
@@ -81,6 +83,7 @@ public class Product {
 
         // Creating the object of the product service!
         ProductService productService = new ProductService();
+
 
         // calling the method findNameByCode from Product service and pass the argument
         // product code as type int!

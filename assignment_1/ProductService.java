@@ -40,19 +40,22 @@ public class ProductService {
     // having the maximum price in the category provided
     // - If no product is found for the given category, return null
     public Product findMaxPriceProduct(String catagory) {
-
-        prods.forEach(
+        try{
+            prods.forEach(
                 a -> {
-                    if (catagory == a.getCategory()) {
+                    if (catagory.equals( a.getCategory())) {
                         product_object = a;
                         if (temp < a.getPrice()) {
                             temp = a.getPrice();
                             temp_obj = a;
                         }
-                    } else {
-                        product_object = null;
-                    }
+                    }   
                 });
+       
+        }
+        catch (Exception e){
+            product_object = null;
+        }
         return (temp_obj);
     }
 
@@ -60,14 +63,19 @@ public class ProductService {
     // in the category provided
     // - If no product are found for the given category, return null
     public ArrayList<Product> getProductsByCategory(String catagory) {
-        prods.forEach(
+        try{
+            prods.forEach(
                 a -> {
                     if (catagory == a.getCategory()) {
                         newList.add(a);
-                    } else {
-                        product_object = null;
                     }
+                       
+                    
                 });
+        }catch(Exception e){
+            product_object = null;
+        }
+       
         return newList;
     }
 }
